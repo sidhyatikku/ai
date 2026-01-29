@@ -5,10 +5,11 @@ html {
   font-family: "IBM Plex Mono", ui-monospace,monospace;
   font-size: 0.85rem;
   font-weight: 300;
-  color: #3c3c3c;
+  color: #f3f3f3;
   margin-left: 4vw;
   margin-right: 4vw;
   height: 100%;
+  background-color: #000000;
 }
 
 body {
@@ -19,8 +20,12 @@ body {
 }
 
 a {
-  color: #3c3c3c;
+  color: #f3f3f3;
   text-decoration: none;
+}
+
+.header_main, .header_main_mobile_right {
+  color: #707070;
 }
 
 .material-symbols-outlined {
