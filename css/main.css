@@ -5,7 +5,7 @@ html {
   font-family: "IBM Plex Mono", ui-monospace,monospace;
   font-size: 0.85rem;
   font-weight: 300;
-  color: #f3f3f3;
+  color: #ababab;
   margin-left: 4vw;
   margin-right: 4vw;
   height: 100%;
@@ -20,12 +20,8 @@ body {
 }
 
 a {
-  color: #f3f3f3;
+  color: #ababab;
   text-decoration: none;
-}
-
-.header_main, .header_main_mobile_right {
-  color: #707070;
 }
 
 .material-symbols-outlined {
