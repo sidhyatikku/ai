@@ -1,4 +1,4 @@
 # photography
-Sidhya Tikku's Photography Website
+Sidhya Tikku's AI Gallery Website
 
-[photography.sidhyatikku.com](https://photography.sidhyatikku.com)
+[ai.sidhyatikku.com](https://ai.sidhyatikku.com)
