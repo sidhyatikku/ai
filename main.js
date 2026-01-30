@@ -53,14 +53,26 @@ const allImages = [
   'img/export/img_50.png',
   'img/export/img_51.png',
   'img/export/img_52.png',
-  'img/export/img_53.png'
+  'img/export/img_53.png',
+  'img/export/img_54.png',
+  'img/export/img_55.png',
+  'img/export/img_56.png',
+  'img/export/img_57.png',
+  'img/export/img_58.png',
+  'img/export/img_59.png',
+  'img/export/img_60.png',
+  'img/export/img_61.png',
+  'img/export/img_62.png',
+  'img/export/img_63.png',
+  'img/export/img_64.png',
+  'img/export/img_65.png'
 ];
 
 // Shuffle the rest
 allImages.sort(() => Math.random() - 0.5);
 
 // Final ordered list: a1 first, rest randomized
-const images = ['img/export/img_3.png', ...allImages];
+const images = ['img/export/img_61.png', ...allImages];
 
 let currentIndex = 0;
 let autoChangeInterval;

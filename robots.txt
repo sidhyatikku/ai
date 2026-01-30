@@ -4,4 +4,4 @@ Disallow:
 User-agent: *
 Disallow: /img/export
 
-Sitemap: https://photography.sidhyatikku.com/sitemap.xml
+Sitemap: https://ai.sidhyatikku.com/sitemap.xml
