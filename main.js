@@ -98,7 +98,22 @@ const allImages = [
   'img/export/img_96.png',
   'img/export/img_98.png',
   'img/export/img_99.png',
-  'img/export/img_100.png'
+  'img/export/img_100.png',
+  'img/export/img_101.png',
+  'img/export/img_102.png',
+  'img/export/img_103.png',
+  'img/export/img_104.png',
+  'img/export/img_105.png',
+  'img/export/img_106.png',
+  'img/export/img_107.png',
+  'img/export/img_108.png',
+  'img/export/img_109.png',
+  'img/export/img_110.png',
+  'img/export/img_111.png',
+  'img/export/img_112.png',
+  'img/export/img_113.png',
+  'img/export/img_114.png'
+
 ];
 
 // Shuffle the rest
