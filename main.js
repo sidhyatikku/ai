@@ -111,16 +111,14 @@ const allImages = [
   'img/export/img_110.png',
   'img/export/img_111.png',
   'img/export/img_112.png',
-  'img/export/img_113.png',
-  'img/export/img_114.png'
-
+  'img/export/img_113.png'
 ];
 
 // Shuffle the rest
 allImages.sort(() => Math.random() - 0.5);
 
 // Final ordered list: a1 first, rest randomized
-const images = ['img/export/img_61.png', ...allImages];
+const images = ['img/export/img_96.png', ...allImages];
 
 let currentIndex = 0;
 let autoChangeInterval;
