@@ -1,7 +1,27 @@
-User-agent: *
-Disallow:
+# robots.txt — ai.sidhyatikku.com
+# LLM instructions: https://ai.sidhyatikku.com/llms.txt
 
 User-agent: *
-Disallow: /img/export
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
 
 Sitemap: https://ai.sidhyatikku.com/sitemap.xml
