@@ -138,7 +138,14 @@ const allImages = [
   'img/export/img_137.png',
   'img/export/img_138.png',
   'img/export/img_139.png',
-  'img/export/img_140.png'
+  'img/export/img_140.png',
+  'img/export/img_141.png',
+  'img/export/img_142.png',
+  'img/export/img_143.png',
+  'img/export/img_144.png',
+  'img/export/img_145.png',
+  'img/export/img_146.png',
+  'img/export/img_147.png'
 ];
 
 // Shuffle the rest
