@@ -182,7 +182,13 @@ function showPreviousImage() {
 // Function to start automatic image change (always clears previous)
 function startAutoChange() {
   clearInterval(autoChangeInterval);
-  autoChangeInterval = setInterval(showNextImage, 6000); // 6 seconds
+  autoChangeInterval = setInterval(function() {
+    showNextImage();
+    gtag('event', 'gallery_auto_advance', {
+      image_index: currentIndex,
+      image_src: images[currentIndex]
+    });
+  }, 6000); // 6 seconds
 }
 
 // Add event listener for click on the image
@@ -194,17 +200,24 @@ document.querySelector('.image_gallery_click').addEventListener('click', functio
   if (clickX < screenWidth / 2) {
     // Clicked on the left side
     showPreviousImage();
-    // console.log("previous image");
+    gtag('event', 'gallery_navigate', {
+      direction: 'previous',
+      image_index: currentIndex,
+      image_src: images[currentIndex]
+    });
   } else {
     // Clicked on the right side
     showNextImage();
-    // console.log("next image");
+    gtag('event', 'gallery_navigate', {
+      direction: 'next',
+      image_index: currentIndex,
+      image_src: images[currentIndex]
+    });
   }
 
   // Reset the auto-change timer when user clicks
   clearInterval(autoChangeInterval);
   startAutoChange();
-  // console.log("timer reset");
 });
 
 document.querySelector('.image_gallery_click').addEventListener('mousemove', function(event) {
@@ -228,10 +241,16 @@ function toggleGridView() {
   if (gridView.style.display === 'none' || gridView.style.display === '') {
     // Populate the grid view with images
     gridView.innerHTML = ''; // Clear any existing images
-    images.forEach(src => {
+    images.forEach((src, index) => {
       const img = document.createElement('img');
       img.src = src;
       img.alt = src.split('/').pop().split('.')[0];
+      img.addEventListener('click', function() {
+        gtag('event', 'grid_image_click', {
+          image_index: index,
+          image_src: src
+        });
+      });
       gridView.appendChild(img);
     });
 
@@ -246,6 +265,8 @@ function toggleGridView() {
 
     // Stop automatic image change when in grid view
     clearInterval(autoChangeInterval);
+
+    gtag('event', 'view_mode_change', { mode: 'grid' });
   } else {
     gridView.style.display = 'none';
     imageGallery.style.display = 'flex';
@@ -255,6 +276,8 @@ function toggleGridView() {
 
     // Restart automatic image change when in slideshow view
     startAutoChange();
+
+    gtag('event', 'view_mode_change', { mode: 'slideshow' });
   }
 }
 

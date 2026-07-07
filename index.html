@@ -83,4 +83,30 @@
   </body>
   <script type="text/javascript" src="main.js"></script>
   <script type="text/javascript" src="time.js"></script>
+  <script>
+    // Track outbound website link clicks
+    document.querySelectorAll('a[href="https://sidhyatikku.com"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'outbound_link_click', {
+          link_url: 'https://sidhyatikku.com',
+          link_text: 'Website'
+        });
+      });
+    });
+
+    // Track time on page at 30s, 60s, 120s milestones
+    var timeThresholds = [30, 60, 120];
+    timeThresholds.forEach(function(seconds) {
+      setTimeout(function() {
+        gtag('event', 'time_on_page', { seconds: seconds });
+      }, seconds * 1000);
+    });
+
+    // Track page visibility changes (tab switch / return)
+    document.addEventListener('visibilitychange', function() {
+      gtag('event', 'page_visibility_change', {
+        state: document.visibilityState
+      });
+    });
+  </script>
 </html>
