@@ -36,4 +36,4 @@ Outside of work, Sidhya runs, shoots film, cooks, follows Formula 1, and plays s
 
 ---
 
-*Built and maintained by Sidhya Tikku. All AI-generated images are original works.*
+*Built and maintained by Sidhya Tikku. All AI-generated images are synthetic works.*
