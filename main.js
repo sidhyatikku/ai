@@ -194,9 +194,20 @@ function showPreviousImage() {
   document.getElementById('galleryImage').src = images[currentIndex];
 }
 
+// Pause auto-advance when tab is hidden to avoid polluting GA4 with idle events
+document.addEventListener('visibilitychange', function() {
+  if (document.visibilityState === 'hidden') {
+    clearInterval(autoChangeInterval);
+  } else if (document.visibilityState === 'visible') {
+    startAutoChange();
+  }
+});
+
 // Function to start automatic image change (always clears previous)
 function startAutoChange() {
   clearInterval(autoChangeInterval);
+  // Only run when the tab is actually visible
+  if (document.visibilityState !== 'visible') return;
   autoChangeInterval = setInterval(function() {
     showNextImage();
     gtag('event', 'gallery_auto_advance', {
@@ -261,12 +272,29 @@ function toggleGridView() {
       img.src = src;
       img.alt = src.split('/').pop().split('.')[0];
       img.addEventListener('click', function() {
+        // Navigate slideshow to the selected image
+        currentIndex = index;
         gtag('event', 'grid_image_click', {
           image_index: index,
           image_src: src
         });
       });
       gridView.appendChild(img);
+    });
+
+    // Track scroll depth inside the grid view at 25%, 50%, 75%, 100%
+    var scrollDepthsFired = {};
+    gridView.addEventListener('scroll', function() {
+      var scrollTop = gridView.scrollTop;
+      var scrollHeight = gridView.scrollHeight - gridView.clientHeight;
+      if (scrollHeight <= 0) return;
+      var pct = Math.round((scrollTop / scrollHeight) * 100);
+      [25, 50, 75, 100].forEach(function(threshold) {
+        if (pct >= threshold && !scrollDepthsFired[threshold]) {
+          scrollDepthsFired[threshold] = true;
+          gtag('event', 'grid_scroll_depth', { percent: threshold });
+        }
+      });
     });
 
     gridView.style.display = 'grid';
