@@ -16,39 +16,6 @@ Every interaction on the site is measured. Page views, gallery navigation, scrol
 
 ---
 
-## What's Inside
-
-| File | Purpose |
-|---|---|
-| `index.html` | Main entry point — markup, meta tags, analytics |
-| `main.js` | Gallery logic — slideshow, grid view, GA4 events |
-| `time.js` | Live clock display across five time zones |
-| `css/main.css` | All styling |
-| `img/export/HQ/` | Full-resolution AI-generated image library (170+ images) |
-
----
-
-## Features
-
-**Slideshow Mode**
-- Full-screen, auto-advancing gallery with 6-second intervals
-- Manual navigation via left/right controls
-- Auto-advance pauses when the browser tab is hidden, resuming on return
-
-**Grid View**
-- Browse the entire collection at once
-- Click any image to jump directly to it in the slideshow
-- Scroll depth tracked at 25%, 50%, 75%, and 100%
-
-**Live City Clocks**
-- Real-time display of local times in NYC, DEL, PAR, DXB, and TOK
-
-**Analytics**
-- Google Analytics 4 (`G-K698KSCEP1`) — event-level tracking for all interactions
-- Microsoft Clarity (`xjfnli2tqm`) — session recordings, heatmaps, and rage click detection
-
----
-
 ## Analytics Events Tracked
 
 | Event | Trigger |
