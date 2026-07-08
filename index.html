@@ -111,6 +111,7 @@
     });
 
     // Track page visibility changes (tab switch / return)
+    // Note: this listener also pauses/resumes gallery auto-advance (handled in main.js)
     document.addEventListener('visibilitychange', function() {
       gtag('event', 'page_visibility_change', {
         state: document.visibilityState
