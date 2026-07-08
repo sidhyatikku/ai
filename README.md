@@ -16,40 +16,11 @@ Every interaction on the site is measured. Page views, gallery navigation, scrol
 
 ---
 
-## Analytics Events Tracked
-
-| Event | Trigger |
-|---|---|
-| `page_view` | Page load |
-| `gallery_navigate` | Manual left/right navigation |
-| `gallery_auto_advance` | Auto-slide every 6 seconds (tab visible only) |
-| `view_mode_change` | Toggle between slideshow and grid view |
-| `grid_image_click` | Clicking an image in grid view |
-| `grid_scroll_depth` | Scrolling to 25%, 50%, 75%, 100% of grid |
-| `outbound_link_click` | Clicking the "Website" link |
-| `time_on_page` | User reaches 30s, 60s, and 120s milestones |
-| `page_visibility_change` | Tab hidden or brought back into focus |
-
----
-
 ## About Sidhya Tikku
 
 Sidhya Tikku is an award-winning Creative Technologist based in New York City. He graduated from **Parsons School of Design** with a degree in Communication Design and also attended **Cornell Tech** for Product Strategy and Management. He works at the intersection of design, product, AI, data, strategy, and marketing — bridging the technical and the creative.
 
 Outside of work, Sidhya runs, shoots film, cooks, follows Formula 1, and plays soccer.
-
-**Work**
-- Product Strategy + Design at a Stealth AI Startup (2024–Present), New York City
-- Product Intern, DTC Technology at NBCUniversal (2023–2024), New York City
-- Design Intern at (RED) (2022), New York City
-
-**Recognition**
-- Google Code-in Grand Prize Winner
-- Adobe Design Achievement Awards, Semifinalist
-- Indigo Design Awards Gold and Silver (2x) Winner
-- NYCxDesign Graduate Showcase, Shortlist
-- Arts Thread Global Creative Showcase, Shortlist
-- Emerging Leader Award, Parsons School of Design
 
 ---
 
